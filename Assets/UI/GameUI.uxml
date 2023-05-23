@@ -1,0 +1,105 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/UIStyle.uss?fileID=7433441132597879392&amp;guid=8551dc2f66d34394282a7b6069e5e4ed&amp;type=3#UIStyle" />
+    <ui:VisualElement name="Game" style="width: 100%; height: 100%; flex-direction: row;">
+        <ui:VisualElement name="Menu" style="flex-direction: column; width: 33%; height: 100%;">
+            <ui:VisualElement name="ResourcesContainer" style="width: 100%; height: 20%; background-color: rgb(0, 0, 0); flex-direction: row; align-items: center;">
+                <ui:VisualElement name="GoldUIContainer" class="resourceUIContainer" style="width: 50%; height: 100%; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-right-width: 0;">
+                    <ui:VisualElement name="GoldUI" class="resourceUI" style="flex-direction: row; align-items: center; justify-content: center; height: 50%; width: 100%; border-right-width: 1px; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255);">
+                        <ui:IMGUIContainer name="GoldImage" style="width: 33%; height: 100%; background-image: url(&apos;project://database/Assets/Images/gold.png?fileID=2800000&amp;guid=43990b820b156094084dcc90e2cfa65b&amp;type=3#gold&apos;);" />
+                        <ui:Label text="7" display-tooltip-when-elided="true" name="ResourceGoldText" enable-rich-text="false" style="color: rgb(255, 255, 255); font-size: 28px; -unity-font-style: bold;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="GemUIContainer" class="resourceUIContainer">
+                    <ui:VisualElement name="GemUI" class="resourceUI" style="width: 100%; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255);">
+                        <ui:IMGUIContainer name="GemImage" style="width: 33%; height: 90%; background-image: url(&apos;project://database/Assets/Images/gem.png?fileID=2800000&amp;guid=fb4f0e6057543664db927af1e1f62d97&amp;type=3#gem&apos;);" />
+                        <ui:Label text="6" display-tooltip-when-elided="true" name="ResourceGemText" enable-rich-text="false" style="color: rgb(255, 255, 255); font-size: 28px; -unity-font-style: bold;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="BuildingButtonsContainer" style="height: 60%; width: 100%; flex-direction: row; flex-wrap: wrap; padding-left: 5%; padding-right: 5%; padding-top: 5%; justify-content: center; background-color: rgb(255, 255, 255); padding-bottom: 5%; align-items: center; flex-basis: 100%; flex-grow: 0;">
+                <ui:Button display-tooltip-when-elided="true" name="BuildingButton1" enable-rich-text="true" class="buildingButton" style="transition-duration: 1s;">
+                    <ui:VisualElement name="BuildingImage" style="height: 70%; width: 100%; background-image: url(&apos;project://database/Assets/Images/building-a.png?fileID=2800000&amp;guid=9f12d870ab3e0a34aa4e602fd30b1714&amp;type=3#building-a&apos;); -unity-background-image-tint-color: rgb(0, 0, 0);" />
+                    <ui:VisualElement name="PriceContainer" class="priceContainer" style="width: 100%; height: 30%; flex-direction: row; align-items: center; justify-content: center; margin-bottom: 2px;">
+                        <ui:VisualElement name="GoldUI" class="resourceUI" style="flex-direction: row; align-items: center; justify-content: center; height: 100%; width: 50%; border-right-width: 1px; border-left-color: rgb(10, 10, 10); border-right-color: rgb(10, 10, 10); border-top-color: rgb(10, 10, 10); border-bottom-color: rgb(10, 10, 10);">
+                            <ui:IMGUIContainer name="GoldImage" style="width: 50%; height: 70%; background-image: url(&apos;project://database/Assets/Images/gold.png?fileID=2800000&amp;guid=43990b820b156094084dcc90e2cfa65b&amp;type=3#gold&apos;);" />
+                            <ui:Label text="7" display-tooltip-when-elided="true" name="GoldText" style="color: rgb(0, 0, 0); font-size: 14px; -unity-font-style: bold; width: 33%;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="GemUI" class="resourceUI" style="width: 50%; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); height: 100%;">
+                            <ui:IMGUIContainer name="GemImage" style="width: 50%; height: 70%; background-image: url(&apos;project://database/Assets/Images/gem.png?fileID=2800000&amp;guid=fb4f0e6057543664db927af1e1f62d97&amp;type=3#gem&apos;);" />
+                            <ui:Label text="6" display-tooltip-when-elided="true" name="GemText" enable-rich-text="false" style="color: rgb(0, 0, 0); font-size: 14px; -unity-font-style: bold;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="BuildingButton2" enable-rich-text="true" class="buildingButton" style="background-color: rgb(228, 228, 228);">
+                    <ui:VisualElement name="BuildingImage" style="height: 70%; width: 100%; background-image: url(&apos;project://database/Assets/Images/building-b.png?fileID=2800000&amp;guid=898b91a6fe5ca794dbe6b44afddd7d0d&amp;type=3#building-b&apos;); -unity-background-image-tint-color: rgb(0, 0, 0);" />
+                    <ui:VisualElement name="PriceContainer" class="priceContainer" style="width: 100%; height: 30%; flex-direction: row; align-items: center; justify-content: center; margin-bottom: 2px;">
+                        <ui:VisualElement name="GoldUI" class="resourceUI" style="flex-direction: row; align-items: center; justify-content: center; height: 100%; width: 50%; border-right-width: 1px; border-left-color: rgb(10, 10, 10); border-right-color: rgb(10, 10, 10); border-top-color: rgb(10, 10, 10); border-bottom-color: rgb(10, 10, 10);">
+                            <ui:IMGUIContainer name="GoldImage" style="width: 50%; height: 70%; background-image: url(&apos;project://database/Assets/Images/gold.png?fileID=2800000&amp;guid=43990b820b156094084dcc90e2cfa65b&amp;type=3#gold&apos;);" />
+                            <ui:Label text="7" display-tooltip-when-elided="true" name="GoldText" style="color: rgb(0, 0, 0); font-size: 14px; -unity-font-style: bold; width: 33%;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="GemUI" class="resourceUI" style="width: 50%; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); height: 100%;">
+                            <ui:IMGUIContainer name="GemImage" style="width: 50%; height: 70%; background-image: url(&apos;project://database/Assets/Images/gem.png?fileID=2800000&amp;guid=fb4f0e6057543664db927af1e1f62d97&amp;type=3#gem&apos;);" />
+                            <ui:Label text="6" display-tooltip-when-elided="true" name="GemText" enable-rich-text="false" style="color: rgb(0, 0, 0); font-size: 14px; -unity-font-style: bold;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="BuildingButton3" enable-rich-text="true" class="buildingButton" style="background-color: rgb(228, 228, 228);">
+                    <ui:VisualElement name="BuildingImage" style="height: 70%; width: 100%; background-image: url(&apos;project://database/Assets/Images/building-c.png?fileID=2800000&amp;guid=388a4b8dcb9e20a4c9fe1824994986c7&amp;type=3#building-c&apos;); -unity-background-image-tint-color: rgb(0, 0, 0);" />
+                    <ui:VisualElement name="PriceContainer" class="priceContainer" style="width: 100%; height: 30%; flex-direction: row; align-items: center; justify-content: center; margin-bottom: 2px;">
+                        <ui:VisualElement name="GoldUI" class="resourceUI" style="flex-direction: row; align-items: center; justify-content: center; height: 100%; width: 50%; border-right-width: 1px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0);">
+                            <ui:IMGUIContainer name="GoldImage" style="width: 50%; height: 70%; background-image: url(&apos;project://database/Assets/Images/gold.png?fileID=2800000&amp;guid=43990b820b156094084dcc90e2cfa65b&amp;type=3#gold&apos;);" />
+                            <ui:Label text="7" display-tooltip-when-elided="true" name="GoldText" style="color: rgb(0, 0, 0); font-size: 14px; -unity-font-style: bold; width: 33%;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="GemUI" class="resourceUI" style="width: 50%; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); height: 100%;">
+                            <ui:IMGUIContainer name="GemImage" style="width: 50%; height: 70%; background-image: url(&apos;project://database/Assets/Images/gem.png?fileID=2800000&amp;guid=fb4f0e6057543664db927af1e1f62d97&amp;type=3#gem&apos;);" />
+                            <ui:Label text="6" display-tooltip-when-elided="true" name="GemText" enable-rich-text="false" style="color: rgb(0, 0, 0); font-size: 14px; -unity-font-style: bold;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="BuildingButton4" enable-rich-text="true" class="buildingButton" style="background-color: rgb(228, 228, 228);">
+                    <ui:VisualElement name="BuildingImage" style="height: 70%; width: 100%; background-image: url(&apos;project://database/Assets/Images/building-d.png?fileID=2800000&amp;guid=0cfd95f2f75b59945964b67fe8f6dedd&amp;type=3#building-d&apos;); -unity-background-image-tint-color: rgb(0, 0, 0);" />
+                    <ui:VisualElement name="PriceContainer" class="priceContainer" style="width: 100%; height: 30%; flex-direction: row; align-items: center; justify-content: center; margin-bottom: 2px;">
+                        <ui:VisualElement name="GoldUI" class="resourceUI" style="flex-direction: row; align-items: center; justify-content: center; height: 100%; width: 50%; border-right-width: 1px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0);">
+                            <ui:IMGUIContainer name="GoldImage" style="width: 50%; height: 70%; background-image: url(&apos;project://database/Assets/Images/gold.png?fileID=2800000&amp;guid=43990b820b156094084dcc90e2cfa65b&amp;type=3#gold&apos;);" />
+                            <ui:Label text="7" display-tooltip-when-elided="true" name="GoldText" style="color: rgb(0, 0, 0); font-size: 14px; -unity-font-style: bold; width: 33%;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="GemUI" class="resourceUI" style="width: 50%; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); height: 100%;">
+                            <ui:IMGUIContainer name="GemImage" style="width: 50%; height: 70%; background-image: url(&apos;project://database/Assets/Images/gem.png?fileID=2800000&amp;guid=fb4f0e6057543664db927af1e1f62d97&amp;type=3#gem&apos;);" />
+                            <ui:Label text="6" display-tooltip-when-elided="true" name="GemText" enable-rich-text="false" style="color: rgb(0, 0, 0); font-size: 14px; -unity-font-style: bold;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="BuildingButton5" enable-rich-text="true" class="buildingButton" style="background-color: rgb(228, 228, 228);">
+                    <ui:VisualElement name="BuildingImage" style="height: 70%; width: 100%; background-image: url(&apos;project://database/Assets/Images/building-e.png?fileID=2800000&amp;guid=5abcd234aff5f0a43bf7247075687c71&amp;type=3#building-e&apos;); -unity-background-image-tint-color: rgb(0, 0, 0);" />
+                    <ui:VisualElement name="PriceContainer" class="priceContainer" style="width: 100%; height: 30%; flex-direction: row; align-items: center; justify-content: center; margin-bottom: 2px;">
+                        <ui:VisualElement name="GoldUI" class="resourceUI" style="flex-direction: row; align-items: center; justify-content: center; height: 100%; width: 50%; border-right-width: 1px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0);">
+                            <ui:IMGUIContainer name="GoldImage" style="width: 50%; height: 70%; background-image: url(&apos;project://database/Assets/Images/gold.png?fileID=2800000&amp;guid=43990b820b156094084dcc90e2cfa65b&amp;type=3#gold&apos;);" />
+                            <ui:Label text="7" display-tooltip-when-elided="true" name="GoldText" style="color: rgb(0, 0, 0); font-size: 14px; -unity-font-style: bold; width: 33%;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="GemUI" class="resourceUI" style="width: 50%; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); height: 100%;">
+                            <ui:IMGUIContainer name="GemImage" style="width: 50%; height: 70%; background-image: url(&apos;project://database/Assets/Images/gem.png?fileID=2800000&amp;guid=fb4f0e6057543664db927af1e1f62d97&amp;type=3#gem&apos;);" />
+                            <ui:Label text="6" display-tooltip-when-elided="true" name="GemText" enable-rich-text="false" style="color: rgb(0, 0, 0); font-size: 14px; -unity-font-style: bold;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="BuildingButton6" enable-rich-text="true" class="buildingButton" style="background-color: rgb(228, 228, 228); -unity-background-image-tint-color: rgb(255, 255, 255);">
+                    <ui:VisualElement name="BuildingImage" style="height: 70%; width: 100%; background-image: url(&apos;project://database/Assets/Images/building-f.png?fileID=2800000&amp;guid=865a055ff823d694da3405eb1390e469&amp;type=3#building-f&apos;); -unity-background-image-tint-color: rgb(0, 0, 0);" />
+                    <ui:VisualElement name="PriceContainer" class="priceContainer" style="width: 100%; height: 30%; flex-direction: row; align-items: center; justify-content: center; margin-bottom: 2px;">
+                        <ui:VisualElement name="GoldUI" class="resourceUI" style="flex-direction: row; align-items: center; justify-content: center; height: 100%; width: 50%; border-right-width: 1px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0);">
+                            <ui:IMGUIContainer name="GoldImage" style="width: 50%; height: 70%; background-image: url(&apos;project://database/Assets/Images/gold.png?fileID=2800000&amp;guid=43990b820b156094084dcc90e2cfa65b&amp;type=3#gold&apos;);" />
+                            <ui:Label text="7" display-tooltip-when-elided="true" name="GoldText" style="color: rgb(0, 0, 0); font-size: 14px; -unity-font-style: bold; width: 33%;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="GemUI" class="resourceUI" style="width: 50%; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); height: 100%;">
+                            <ui:IMGUIContainer name="GemImage" style="width: 50%; height: 70%; background-image: url(&apos;project://database/Assets/Images/gem.png?fileID=2800000&amp;guid=fb4f0e6057543664db927af1e1f62d97&amp;type=3#gem&apos;);" />
+                            <ui:Label text="6" display-tooltip-when-elided="true" name="GemText" enable-rich-text="false" style="color: rgb(0, 0, 0); font-size: 14px; -unity-font-style: bold;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:Button>
+            </ui:VisualElement>
+            <ui:VisualElement name="RestartButtonContainer" style="width: 100%; height: 20%; align-items: center; justify-content: center; background-color: rgb(255, 255, 255); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;">
+                <ui:Button text="RESTART" display-tooltip-when-elided="true" name="RestartButton" class="restartButton" style="letter-spacing: 3px; -unity-text-outline-width: 0; -unity-font-style: bold; font-size: 14px; -unity-font: url(&apos;project://database/Library/unity%20default%20resources?fileID=10102&amp;guid=0000000000000000e000000000000000&amp;type=0#Arial&apos;); background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); width: 80%; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; height: 60%;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Map" style="width: 67%; height: 100%;" />
+    </ui:VisualElement>
+</ui:UXML>
