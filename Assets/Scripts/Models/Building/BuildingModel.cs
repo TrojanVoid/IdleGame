@@ -14,6 +14,7 @@ public class BuildingModel : MonoBehaviour
     public int goldYield;
 
     private Vector3Int buildingShapeMatrix;
+
     
 
     public void CreateBuildingAtPosition(Vector3Int pos){

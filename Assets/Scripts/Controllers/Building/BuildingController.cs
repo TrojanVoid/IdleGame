@@ -23,6 +23,7 @@ public class BuildingController : MonoBehaviour{
 
     public void CreateBuildingAtPosition(Vector3Int pos){
         model.CreateBuildingAtPosition(pos);
+        
     }
 
     public List<Building> GetBuildings(){

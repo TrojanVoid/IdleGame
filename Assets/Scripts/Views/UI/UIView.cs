@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.Tilemaps;
+using UnityEngine.SceneManagement;
 
 using System.Collections.Generic;
 
@@ -14,11 +15,12 @@ public class UIView : MonoBehaviour {
     public Material redTileMaterial;
     public Material greenTileMaterial;
     public TileBase buildingTile;
+    public TileBase emptyTile;
     
-
 
     private UIDocument UIDocument;
     private List<Button> buildingButtons;
+    private Button restartButton;
     private Label goldLabel;
     private Label gemLabel;
     private int selectedBuildingIndex;
@@ -31,6 +33,7 @@ public class UIView : MonoBehaviour {
     
 
     private void OnEnable(){
+        Building.LoadBuildings();
         occupiedTilesMatrix = new List<Vector3Int>();
         UIDocument = GetComponent<UIDocument>();
         FetchUIElements();
@@ -42,6 +45,13 @@ public class UIView : MonoBehaviour {
             button.RegisterCallback<MouseDownEvent>(OnMouseDown, TrickleDown.TrickleDown);
             UIDocument.rootVisualElement.RegisterCallback<MouseUpEvent>(OnMouseUp);
         }
+        restartButton.clicked += () => {
+            Building.ResetBuildings();
+            resourceController.ResetResources();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        };
+
+        SetBuildingTiles();
     }
 
     private void Update(){
@@ -159,6 +169,7 @@ public class UIView : MonoBehaviour {
     
     private void FetchUIElements(){
         VisualElement UIRoot = UIDocument.rootVisualElement;
+        restartButton = UIRoot.Q<Button>("RestartButton");
         goldLabel = UIRoot.Q<Label>("ResourceGoldText");
         gemLabel = UIRoot.Q<Label>("ResourceGemText");
         buildingButtons = new List<Button>{
@@ -170,6 +181,4 @@ public class UIView : MonoBehaviour {
             UIRoot.Q<Button>("BuildingButton6")
         };
     }
-
-    
 }

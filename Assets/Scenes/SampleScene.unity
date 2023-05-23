@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e02af65dc5ac2b64babfbcaf6b6aa4aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gemAmount: 10
+  gemAmount: 5
   goldAmount: 10
 --- !u!4 &165034828
 Transform:
@@ -1866,6 +1866,7 @@ MonoBehaviour:
   redTileMaterial: {fileID: 2100000, guid: 988be6cf6300f734c90a31dbd1827570, type: 2}
   greenTileMaterial: {fileID: 2100000, guid: 3da7e692ff722564cb150429520e3b02, type: 2}
   buildingTile: {fileID: 11400000, guid: f14ae660b78d2e642a0fa86d3e898ebd, type: 2}
+  emptyTile: {fileID: 11400000, guid: 95c80c41540397142b6ec8210d72c458, type: 2}
 --- !u!1 &1188492787
 GameObject:
   m_ObjectHideFlags: 0

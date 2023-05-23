@@ -35,4 +35,8 @@ public class ResourceController : MonoBehaviour
         model.AddGem(amount);
     }
 
+    public void ResetResources(){
+        model.ResetResources();
+    }
+
 }
